@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<h1>Vacancy list</h1>
+
+{% for vacancy in vacancy_list %}
+
+<ul>
+	<li>{{ vacancy.title }}</li>
+	<li>{{ vacancy.body }}</li>
+	<li><a href="{% url 'vacancy_delete' vacancy.pk %}">Vacancy delete</a></li>
+</ul>
+
+{% endfor %}
+
+{% endblock %}
