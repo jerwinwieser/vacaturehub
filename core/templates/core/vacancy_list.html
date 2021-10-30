@@ -7,10 +7,12 @@
 {% for vacancy in vacancy_list %}
 
 <ul>
+	<li>{{ vacancy.pk }}</li>
 	<li>{{ vacancy.title }}</li>
 	<li>{{ vacancy.body }}</li>
-	<li><a href="{% url 'vacancy_update' vacancy.pk %}">Vacancy update</a></li>
-	<li><a href="{% url 'vacancy_delete' vacancy.pk %}">Vacancy delete</a></li>
+	<li><a href="{% url 'vacancy_detail' vacancy.pk %}">read</a>, 
+	<a href="{% url 'vacancy_update' vacancy.pk %}">update</a>, 
+	<a href="{% url 'vacancy_delete' vacancy.pk %}">delete</a></li>
 </ul>
 
 {% endfor %}
