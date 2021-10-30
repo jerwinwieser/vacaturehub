@@ -9,6 +9,7 @@
 <ul>
 	<li>{{ vacancy.title }}</li>
 	<li>{{ vacancy.body }}</li>
+	<li><a href="{% url 'vacancy_update' vacancy.pk %}">Vacancy update</a></li>
 	<li><a href="{% url 'vacancy_delete' vacancy.pk %}">Vacancy delete</a></li>
 </ul>
 

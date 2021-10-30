@@ -15,6 +15,12 @@ class VacancyCreateView(CreateView):
     fields = '__all__'
     success_url = reverse_lazy('vacancy_list')
 
+class VacancyUpdateView(UpdateView):
+    model = Vacancy
+    fields = '__all__'
+    template_name_suffix = '_update_form'
+    success_url = reverse_lazy('vacancy_list')
+
 class VacancyDeleteView(DeleteView):
     model = Vacancy
     success_url = reverse_lazy('vacancy_list')
